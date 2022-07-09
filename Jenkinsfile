@@ -13,7 +13,9 @@ pipeline {
             steps {
                 echo "I'm executing in node: ${env.NODE_NAME}"
                 sh 'cat /proc/1/cgroup'
-                sh "ls -ali / | sed '2!d' |awk {'print $1'}"
+                sh '''
+                    ls -ali / | sed '2!d' |awk {'print $1'}
+                '''
                 sh 'node --version'
                 sh 'pwd'
                 // sh 'svn --version'
