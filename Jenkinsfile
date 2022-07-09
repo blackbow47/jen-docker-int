@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo "I'm executing in node: ${env.NODE_NAME}"
                 sh 'node --version'
-                sh 'svn --version'
+                // sh 'svn --version'
             }
         }
     }
