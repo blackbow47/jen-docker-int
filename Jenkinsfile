@@ -2,10 +2,17 @@ pipeline {
     agent none
     stages {
         stage('Test') {
-            agent { dockerfile true }
+            // agent { dockerfile true }
+            agent {
+                dockerfile {
+                    true
+                    args "-v /var/lib/jenkins/workspace/TF-pipeline:/tools"
+                }
+            }
             steps {
                 echo "I'm executing in node: ${env.NODE_NAME}"
                 sh 'node --version'
+                sh 'pwd'
                 // sh 'svn --version'
             }
         }
