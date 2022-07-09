@@ -2,14 +2,14 @@ pipeline {
     agent none
     stages {
         stage('Test') {
-            // agent { dockerfile true }
-            agent {
-                dockerfile {
-                    filename 'Dockerfile'
-                    label 'master'
-                    args "-v /var/lib/jenkins/workspace/TF-pipeline:/tools"
-                }
-            }
+            agent { dockerfile true }
+            // agent {
+            //     dockerfile {
+            //         filename 'Dockerfile'
+            //         label 'master'
+            //         args "-v /var/lib/jenkins/workspace/TF-pipeline:/tools"
+            //     }
+            // }
             steps {
                 echo "I'm executing in node: ${env.NODE_NAME}"
                 sh 'cat /proc/1/cgroup'
