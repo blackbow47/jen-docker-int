@@ -12,6 +12,7 @@ pipeline {
             }
             steps {
                 echo "I'm executing in node: ${env.NODE_NAME}"
+                sh 'cat /proc/1/cgroup'
                 sh 'node --version'
                 sh 'pwd'
                 // sh 'svn --version'
