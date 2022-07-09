@@ -6,7 +6,7 @@ pipeline {
             agent {
                 dockerfile {
                     filename 'Dockerfile'
-                    lable 'master'
+                    label 'master'
                     args "-v /var/lib/jenkins/workspace/TF-pipeline:/tools"
                 }
             }
