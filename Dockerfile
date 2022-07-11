@@ -1,6 +1,6 @@
 
 #FROM node:16.13.1-alpine
-FROM ubuntu:12.04
+FROM ubuntu:14.04
 # RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 USER root
 #RUN apk add -U subversion
