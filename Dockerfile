@@ -11,7 +11,7 @@ USER root
 #     && sudo mv terraform /usr/bin/terraform
 RUN apt-get dist-upgrade
 RUN apt-get -y upgrade
-# RUN apt-get update
+RUN apt-get update
 # RUN apt-get install -y apt-transport-https
 # RUN apt-get install sudo 
 # RUN apt-get install wget 
