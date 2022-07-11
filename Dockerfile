@@ -4,4 +4,4 @@ FROM ubuntu:12.04
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 USER docker
 #RUN apk add -U subversion
-#RUN apk add sudo
+RUN apt-get install sudo
