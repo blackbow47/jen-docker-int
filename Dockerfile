@@ -16,5 +16,6 @@ RUN apt-get update
 # RUN apt-get install sudo 
 RUN apt-get install wget 
 RUN wget https://releases.hashicorp.com/terraform/0.12.21/terraform_0.12.21_linux_amd64.zip 
+RUN apt-get install unzip
 RUN unzip -o terraform_0.12.21_linux_amd64.zip && rm terraform_0.12.21_linux_amd64.zip 
-RUN sudo mv terraform /usr/bin/terraform
+RUN mv terraform /usr/bin/terraform
